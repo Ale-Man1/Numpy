@@ -42,20 +42,22 @@ def main():
     # Part 7.1
     df = pd.read_csv('https://raw.githubusercontent.com/Ale-Man1/Numpy/main/Module6_Data.csv')
     pd.set_option('display.width', None)
-    print(df)
+    #print(df, "\n")
     large_water = df["NYC Consumption(Million gallons per day)"].max()
-    print(large_water)
+    print("Maximum yearly NYC consumption of water in millions of gallons per day is :  ", large_water)
     # Part 7.2
-    print(df.shape[0])
+    p7_2 = df.shape[0]
+    print("The amount of calendar years represented within this data set is :  ", p7_2)
     # print(df.__len__()) would also show how many years since every row is a year
     # Part 7.3 ,this part was taken and repurposed by the file 6_Numpy.ipynb
     colmean = np.mean(df["Per Capita(Gallons per person per day)"])
-    print(colmean)
+    print("The mean of the per capita daily water consumption is :  ", colmean)
 
     colstddev = np.std(df["Per Capita(Gallons per person per day)"])
-    print(colstddev)
+    print("The standard deviation of per capita daily water consumption is :  ", colstddev)
     # Part 7.4
-
+    pop_diff = np.diff(df["New York City Population"])
+    print("\n", pop_diff)
 
 if __name__ == "__main__":
     main()
