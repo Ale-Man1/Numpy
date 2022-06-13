@@ -40,7 +40,7 @@ def main():
 
     # Part 7:
     # Part 7.1
-    df = pd.read_csv('C:/Users/clank/Desktop/QC Folder/Summer 2022/CSCI 381/Numpy/Module6_Data.csv')
+    df = pd.read_csv('https://raw.githubusercontent.com/Ale-Man1/Numpy/main/Module6_Data.csv')
     pd.set_option('display.width', None)
     print(df)
     large_water = df["NYC Consumption(Million gallons per day)"].max()
